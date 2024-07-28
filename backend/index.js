@@ -69,6 +69,47 @@ async function run() {
         res.send(result);
     })
 
+    // delete a book data : path or delete method
+    app.delete("/book/:id", async (req, res) => {
+        const id = req.params.id;
+        console.log(`Received request to delete book with id: ${id}`);
+      
+        try {
+          // Ensure the id is a valid ObjectId
+          if (!ObjectId.isValid(id)) {
+            console.error('Invalid ObjectId');
+            return res.status(400).send('Invalid ObjectId');
+          }
+      
+          const filter = { _id: new ObjectId(id) };
+      
+          // Attempt to delete the book
+          const result = await bookCollections.deleteOne(filter);
+      
+          if (result.deletedCount === 0) {
+            console.error('No document found with that id');
+            return res.status(404).send('No document found with that id');
+          }
+      
+          console.log('Delete result:', result);
+          res.send(result);
+        } catch (error) {
+          console.error('Error deleting book:', error);
+          res.status(500).send('Error deleting book');
+        }
+      });
+      
+    // find by category
+    app.get("/all-books",async(req, res)=>{
+        let query = {};
+        if(req.query.category){
+            query = {category:req.query.category}
+        }
+        const result = await bookCollections.find(query);
+        res.send(result);
+
+    });  
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
