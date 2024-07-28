@@ -1,5 +1,7 @@
 require('dotenv').config();
 const express = require('express')
+const { ObjectId } = require('mongodb');
+
 const app = express()
 const PORT = process.env.PORT || 1000
 
@@ -31,6 +33,42 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
+
+    // create a collection of documents
+    const bookCollections = client.db("BookInventory").collection("books");
+    // insert a book to the db: post method
+    app.post("/upload-book",async(req,res)=>{
+        const data = req.body;
+        const result = await bookCollections.insertOne(data);
+        res.send(result);
+    })
+
+    // get all books from db
+    app.get("/all-books",async(req, res)=>{
+        const books = bookCollections.find();
+        const result = await books.toArray();
+        res.send(result); 
+    })
+
+    //update a book data : path or update method
+    app.patch("/book/:id",async(req, res)=>{
+        const id = req.params.id;
+        console.log(id);
+        const updateBookData = req.body;
+        const filter = {_id:new ObjectId(id)};
+        const options = { upsert: true };
+
+        const updateDoc = {
+            $set: {
+              ...updateBookData
+            },
+          };
+
+        //update
+        const result = await bookCollections.updateOne(filter, updateDoc, options);
+        res.send(result);
+    })
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
