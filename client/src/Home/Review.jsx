@@ -43,21 +43,29 @@ const Review = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="text-amber-500 flex gap-2">
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-            </div>
             <div>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
-                assumenda cumque facere labore dolor repudiandae sed dolorem
-                commodi impedit. Incidunt eos voluptates adipisci modi molestias
-                ipsum, sapiente a voluptatum officia.
-              </p>
-              <Avatar img={ProPic} alt="avatar of Jese" rounded />
-
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                  assumenda cumque facere labore dolor repudiandae sed dolorem
+                  commodi impedit. Incidunt eos voluptates adipisci modi
+                  molestias ipsum, sapiente a voluptatum officia.
+                </p>
+                <Avatar
+                  img={ProPic}
+                  alt="avatar of Jese"
+                  rounded
+                  className="w-10 mb-4 "
+                />
+                <h5 className="text-lg">Mark Ping</h5>
+                <p className="text-base">CEO, 123 Company </p>
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>Slide 2</SwiperSlide>
