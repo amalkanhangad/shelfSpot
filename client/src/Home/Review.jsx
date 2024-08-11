@@ -42,16 +42,16 @@ const Review = () => {
           modules={[Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div>
+          <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
+            <div className='space-x-6'>
               <div className="text-amber-500 flex gap-2">
                 <FaStar />
                 <FaStar />
                 <FaStar />
                 <FaStar />
               </div>
-              <div>
-                <p>
+              <div className='mt-7'>
+                <p className='mb-5'> 
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
                   assumenda cumque facere labore dolor repudiandae sed dolorem
                   commodi impedit. Incidunt eos voluptates adipisci modi
@@ -68,14 +68,112 @@ const Review = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
+            <div className='space-x-6'>
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className='mt-7'>
+                <p className='mb-5'> 
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                  assumenda cumque facere labore dolor repudiandae sed dolorem
+                  commodi impedit. Incidunt eos voluptates adipisci modi
+                  molestias ipsum, sapiente a voluptatum officia.
+                </p>
+                <Avatar
+                  img={ProPic}
+                  alt="avatar of Jese"
+                  rounded
+                  className="w-10 mb-4 "
+                />
+                <h5 className="text-lg">Mark Ping</h5>
+                <p className="text-base">CEO, 123 Company </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
+            <div className='space-x-6'>
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className='mt-7'>
+                <p className='mb-5'> 
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                  assumenda cumque facere labore dolor repudiandae sed dolorem
+                  commodi impedit. Incidunt eos voluptates adipisci modi
+                  molestias ipsum, sapiente a voluptatum officia.
+                </p>
+                <Avatar
+                  img={ProPic}
+                  alt="avatar of Jese"
+                  rounded
+                  className="w-10 mb-4 "
+                />
+                <h5 className="text-lg">Mark Ping</h5>
+                <p className="text-base">CEO, 123 Company </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
+            <div className='space-x-6'>
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className='mt-7'>
+                <p className='mb-5'> 
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                  assumenda cumque facere labore dolor repudiandae sed dolorem
+                  commodi impedit. Incidunt eos voluptates adipisci modi
+                  molestias ipsum, sapiente a voluptatum officia.
+                </p>
+                <Avatar
+                  img={ProPic}
+                  alt="avatar of Jese"
+                  rounded
+                  className="w-10 mb-4 "
+                />
+                <h5 className="text-lg">Mark Ping</h5>
+                <p className="text-base">CEO, 123 Company </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className='shadow-2xl bg-white py-8 px-4 md:m-5 rounded-lg border'>
+            <div className='space-x-6'>
+              <div className="text-amber-500 flex gap-2">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+              <div className='mt-7'>
+                <p className='mb-5'> 
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                  assumenda cumque facere labore dolor repudiandae sed dolorem
+                  commodi impedit. Incidunt eos voluptates adipisci modi
+                  molestias ipsum, sapiente a voluptatum officia.
+                </p>
+                <Avatar
+                  img={ProPic}
+                  alt="avatar of Jese"
+                  rounded
+                  className="w-10 mb-4 "
+                />
+                <h5 className="text-lg">Mark Ping</h5>
+                <p className="text-base">CEO, 123 Company </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          
+          
         </Swiper>
       </div>
     </div>
